@@ -1,5 +1,5 @@
 # JavaFX-SimonSays
-A simple Simon Says game in which you need to follow the pattern of blinking colors.
+A very simple Simon Says game in which the player needs to follow and remember the pattern of blinking colors in order to win.
 
 ## Screenshot
 
