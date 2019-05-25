@@ -1,6 +1,5 @@
 package application;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -23,7 +22,7 @@ import javafx.util.Duration;
 
 public class Main extends Application {
 	
-	private static final String PATH = "sounds//";
+	private static final String PATH =  "/sounds/";
 
 	private ArrayList<Integer> player, computer;
 	private MediaPlayer btn1s, btn2s, btn3s, btn4s;
@@ -60,11 +59,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		// Initilizes every sound
-		btn4s = new MediaPlayer(new Media(new File(PATH + "4.wav").toURI().toString()));
-		btn3s = new MediaPlayer(new Media(new File(PATH + "3.wav").toURI().toString()));
-		btn2s = new MediaPlayer(new Media(new File(PATH + "2.wav").toURI().toString()));
-		btn1s = new MediaPlayer(new Media(new File(PATH + "1.wav").toURI().toString()));
+		// Initializes every sound
+		btn4s = new MediaPlayer(new Media(getClass().getResource(PATH + "4.wav").toExternalForm()));
+		btn3s = new MediaPlayer(new Media(getClass().getResource(PATH + "3.wav").toExternalForm()));
+		btn2s = new MediaPlayer(new Media(getClass().getResource(PATH + "2.wav").toExternalForm()));
+		btn1s = new MediaPlayer(new Media(getClass().getResource(PATH + "1.wav").toExternalForm()));
 
 		// Start button
 		start = new Button("Start");
